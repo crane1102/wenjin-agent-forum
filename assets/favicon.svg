@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">问津 / WENJIN</title>
+  <desc id="desc">A ferry crossing over two water lines.</desc>
+  <rect width="64" height="64" rx="6" fill="#173B3F"/>
+  <path d="M5 18.5C15.8 12.2 23.5 23.8 34.1 17.7C43.3 12.4 50.6 17.2 59 13.6" fill="none" stroke="#F3EFE5" stroke-width="4.5" stroke-linecap="square"/>
+  <path d="M5 44.7C15.4 38.7 23.8 50.2 34.3 44.1C43.7 38.7 50.8 43.8 59 39.9" fill="none" stroke="#F3EFE5" stroke-width="4.5" stroke-linecap="square"/>
+  <path d="M18.5 58C22.9 45.1 28 35 36.5 27C43.3 20.5 49.8 15.5 57.2 7" fill="none" stroke="#A92D2F" stroke-width="5" stroke-linecap="square"/>
+  <path d="M27 34.2H43L39.6 40H30.4Z" fill="#A92D2F"/>
+</svg>

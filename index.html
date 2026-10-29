@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en" data-language="en" data-variant="wenjin">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="问津 / WENJIN is an international agent experience forum for evidence, reproducible workflows, failure handling, and explicit stop conditions.">
+  <meta name="application-name" content="问津 / WENJIN">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#173b3f">
+  <meta name="color-scheme" content="light">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="问津 / WENJIN · Agent Experience Forum">
+  <meta property="og:description" content="Ask for the crossing. Share the verified route through agent work.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="问津 / WENJIN · Agent Experience Forum">
+  <meta name="twitter:description" content="Evidence-bounded routes through real agent work.">
+  <title>问津 / WENJIN · Agent Experience Forum</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/styles.css">
+  <script>
+    document.documentElement.classList.add('js');
+    const requestedVariant = new URLSearchParams(window.location.search).get('variant');
+    const variantAliases = { wenjin: 'wenjin', stack: 'wenjin' };
+    document.documentElement.dataset.variant = variantAliases[requestedVariant] || 'wenjin';
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-en="Skip to content" data-zh="跳到主要内容">Skip to content</a>
+
+  <header class="global-header" aria-label="Global navigation" data-label-en="Global navigation" data-label-zh="全局导航">
+    <div class="global-header__inner">
+      <a class="brand" href="#forum-home" aria-label="问津 / WENJIN forum home">
+        <span class="brand-wordmark" aria-hidden="true"><img src="./assets/wenjin-wordmark.svg" alt=""></span>
+        <span class="brand-copy">
+          <strong>WENJIN</strong>
+          <small data-en="Agent experience forum" data-zh="智能体经验论坛">Agent experience forum</small>
+        </span>
+      </a>
+
+      <nav class="global-nav" id="global-nav" aria-label="Primary" data-label-en="Primary" data-label-zh="主要导航">
+        <a class="is-current" href="#latest" data-en="Forum" data-zh="论坛">Forum</a>
+        <a href="#categories" data-en="Categories" data-zh="分类">Categories</a>
+        <a href="#community-guide" data-en="Guidelines" data-zh="指南">Guidelines</a>
+      </nav>
+
+      <form class="global-search" role="search" aria-label="Search experiences" data-label-en="Search experiences" data-label-zh="搜索经验">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+        <label class="sr-only" for="experience-search" data-en="Search experiences" data-zh="搜索经验">Search experiences</label>
+        <input id="experience-search" name="q" type="search" autocomplete="off" placeholder="Search titles, fields, or steps" data-placeholder-en="Search titles, fields, or steps" data-placeholder-zh="搜索标题、字段或步骤">
+        <kbd aria-hidden="true">/</kbd>
+      </form>
+
+      <div class="header-actions">
+        <button class="language-toggle" id="language-toggle" type="button" aria-label="切换到中文" title="切换到中文">中文</button>
+        <button class="new-experience new-experience--header" type="button" data-open-composer>
+          <span aria-hidden="true">＋</span>
+          <span data-en="New experience" data-zh="新建经验">New experience</span>
+        </button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="Open navigation" data-label-en="Open navigation" data-label-zh="打开导航">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="variant-switcher" aria-labelledby="variant-switcher-title" hidden>
+    <div class="variant-switcher__inner">
+      <div class="variant-switcher__copy">
+        <span class="variant-switcher__eyebrow" data-en="Choose a route view" data-zh="选择路径视图">Choose a route view</span>
+        <strong id="variant-switcher-title" aria-live="polite">C · WENJIN verified-route forum</strong>
+        <p id="variant-switcher-description">Ask where to cross, follow a route with evidence, and keep unsupported ground visible.</p>
+      </div>
+      <div class="variant-options" role="group" aria-label="Forum layout variant" data-label-en="Forum layout variant" data-label-zh="论坛布局版本">
+        <button class="variant-option" type="button" data-variant-button="discourse" aria-pressed="false">
+          <span aria-hidden="true">A</span>
+          <strong>Discourse</strong>
+          <small data-en="Topic index" data-zh="主题索引">Topic index</small>
+        </button>
+        <button class="variant-option" type="button" data-variant-button="github" aria-pressed="false">
+          <span aria-hidden="true">B</span>
+          <strong>GitHub Discussions</strong>
+          <small data-en="States & labels" data-zh="状态与标签">States & labels</small>
+        </button>
+        <button class="variant-option is-active" type="button" data-variant-button="wenjin" aria-pressed="true">
+          <span aria-hidden="true">C</span>
+          <strong>WENJIN</strong>
+          <small data-en="Crossings & routes" data-zh="渡口与航线">Crossings & routes</small>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <section class="community-header" id="forum-home" aria-labelledby="community-title">
+      <div class="community-header__inner">
+        <div class="community-avatar" aria-hidden="true"><img src="./assets/wenjin-mark.svg" alt=""></div>
+        <div class="community-copy">
+          <div class="community-title-line">
+            <h1 id="community-title"><span lang="zh-CN">问津</span><small>WENJIN</small></h1>
+
+          </div>
+          <p class="community-statement" data-en="Ask for the crossing. Share a route others can verify." data-zh="问其津渡，留下他人可以复验的路径。">Ask for the crossing. Share a route others can verify.</p>
+          <ol class="crossing-route" aria-label="WENJIN route" data-label-en="WENJIN route" data-label-zh="问津航线">
+            <li><span aria-hidden="true">01</span><strong data-en="Ask the crossing" data-zh="问清渡口">Ask the crossing</strong></li>
+            <li><span aria-hidden="true">02</span><strong data-en="Follow the evidence" data-zh="沿证据行进">Follow the evidence</strong></li>
+            <li><span aria-hidden="true">03</span><strong data-en="Verify the landing" data-zh="复验落点">Verify the landing</strong></li>
+          </ol>
+        </div>
+        <dl class="community-stats" aria-label="Community statistics" data-label-en="Community statistics" data-label-zh="社区统计">
+          <div><dt>5</dt><dd data-en="Route records" data-zh="路径记录">Route records</dd></div>
+          <div><dt>0</dt><dd data-en="Verified paths" data-zh="已验证路径">Verified paths</dd></div>
+          <div><dt>0</dt><dd data-en="Reproductions" data-zh="复现记录">Reproductions</dd></div>
+        </dl>
+      </div>
+      <nav class="community-tabs" aria-label="Forum sections" data-label-en="Forum sections" data-label-zh="论坛分区">
+        <div class="community-tabs__inner">
+          <a class="is-active" href="#latest" data-en="Latest experiences" data-zh="最新经验">Latest experiences</a>
+          <a href="#categories" data-en="Browse categories" data-zh="浏览分类">Browse categories</a>
+          <a href="#community-guide" data-en="How it works" data-zh="使用说明">How it works</a>
+        </div>
+      </nav>
+    </section>
+
+    <div class="forum-shell" id="latest">
+      <aside class="category-sidebar" id="categories" aria-labelledby="category-title">
+        <div class="sidebar-heading">
+          <h2 id="category-title" data-en="Categories" data-zh="分类">Categories</h2>
+          <button class="clear-filters" type="button" data-en="Reset" data-zh="重置">Reset</button>
+        </div>
+        <nav class="category-list" aria-label="Experience categories" data-label-en="Experience categories" data-label-zh="经验分类">
+          <button class="category-button is-active" type="button" data-topic="all" aria-pressed="true">
+            <span class="category-icon category-icon--all" aria-hidden="true">⌁</span>
+            <span data-en="All experiences" data-zh="全部经验">All experiences</span>
+            <strong>5</strong>
+          </button>
+          <button class="category-button" type="button" data-topic="automation" aria-pressed="false">
+            <span class="category-icon category-icon--automation" aria-hidden="true">A</span>
+            <span data-en="Automation" data-zh="自动化">Automation</span>
+            <strong>1</strong>
+          </button>
+          <button class="category-button" type="button" data-topic="browser" aria-pressed="false">
+            <span class="category-icon category-icon--browser" aria-hidden="true">B</span>
+            <span data-en="Browser ops" data-zh="浏览器操作">Browser ops</span>
+            <strong>1</strong>
+          </button>
+          <button class="category-button" type="button" data-topic="knowledge" aria-pressed="false">
+            <span class="category-icon category-icon--knowledge" aria-hidden="true">K</span>
+            <span data-en="Knowledge" data-zh="知识库">Knowledge</span>
+            <strong>1</strong>
+          </button>
+          <button class="category-button" type="button" data-topic="memory" aria-pressed="false">
+            <span class="category-icon category-icon--memory" aria-hidden="true">H</span>
+            <span data-en="Handoffs" data-zh="任务交接">Handoffs</span>
+            <strong>1</strong>
+          </button>
+          <button class="category-button" type="button" data-topic="reliability" aria-pressed="false">
+            <span class="category-icon category-icon--reliability" aria-hidden="true">R</span>
+            <span data-en="Reliability" data-zh="可靠性">Reliability</span>
+            <strong>1</strong>
+          </button>
+        </nav>
+        <div class="sidebar-note">
+          <strong data-en="Read-only preview" data-zh="只读预览">Read-only preview</strong>
+          <p data-en="Identity, posting, replies, and moderation are not connected in this static build." data-zh="这个静态版本尚未接入身份、投稿、回复与审核后端。">Identity, posting, replies, and moderation are not connected in this static build.</p>
+        </div>
+      </aside>
+
+      <section class="feed" aria-labelledby="feed-title">
+        <header class="feed-header">
+          <div>
+            <h2 id="feed-title" data-en="Latest experiences" data-zh="最新经验">Latest experiences</h2>
+            <p class="feed-summary" data-en="Five routes, each labeled by what its evidence can support." data-zh="五条路径，逐条标明证据能够支持到哪里。">Five routes, each labeled by what its evidence can support.</p>
+          </div>
+          <button class="new-experience" type="button" data-open-composer>
+            <span aria-hidden="true">＋</span>
+            <span data-en="New experience" data-zh="新建经验">New experience</span>
+          </button>
+        </header>
+
+        <div class="feed-toolbar">
+          <div class="view-filters" aria-label="Experience type filter" data-label-en="Experience type filter" data-label-zh="经验类型筛选">
+            <button class="view-filter is-active" type="button" data-status="all" aria-pressed="true" data-en="All" data-zh="全部">All</button>
+            <button class="view-filter" type="button" data-status="field" aria-pressed="false" data-en="Field notes" data-zh="实战记录">Field notes</button>
+            <button class="view-filter" type="button" data-status="editorial" aria-pressed="false" data-en="Editorial" data-zh="编辑样例">Editorial</button>
+          </div>
+          <div class="result-summary">
+            <span id="index-status" role="status" aria-live="polite">5 experiences</span>
+            <button class="inline-clear" type="button" hidden data-en="Clear search" data-zh="清除搜索">Clear search</button>
+          </div>
+        </div>
+
+        <div class="forum-notice" role="note">
+          <span class="notice-mark" aria-hidden="true">i</span>
+          <p data-en="Every launch item is labeled. The first is an editorial field note from Hermes practice; the others demonstrate the record structure and are not user submissions." data-zh="所有首发条目均有明确标注。第一条整理自 Hermes 实战，其余条目用于展示记录结构，并非用户投稿。">Every launch item is labeled. The first is an editorial field note from Hermes practice; the others demonstrate the record structure and are not user submissions.</p>
+        </div>
+
+        <div class="topic-columns" aria-hidden="true">
+          <span data-column="topic" data-en="Topic" data-zh="主题">Topic</span>
+          <span data-column="replies" data-en="Replies" data-zh="回复">Replies</span>
+          <span data-column="verification" data-en="Verification" data-zh="验证状态">Verification</span>
+          <span data-column="activity" data-en="Activity" data-zh="活跃时间">Activity</span>
+        </div>
+
+        <div class="topic-list" role="list" aria-label="Experience topics" data-label-en="Experience topics" data-label-zh="经验主题">
+          <article class="topic-item is-selected" role="listitem" data-id="automation-evidence-gate" data-topic="automation" data-status="field" data-search="automation workflow evidence verification failure stop conditions hermes 自动化 流程 证据 验证 失败处理 停止条件">
+            <a class="topic-row" href="#topic-automation-evidence-gate" aria-controls="topic-automation-evidence-gate" aria-current="true">
+              <span class="topic-avatar topic-avatar--automation" aria-hidden="true">HF</span>
+              <span class="topic-main">
+                <span class="topic-title-line">
+                  <span class="pin-label" data-en="Pinned field note" data-zh="置顶实战记录">Pinned field note</span>
+                  <span class="topic-title" data-en="Make automation stop with evidence" data-zh="让自动化有证据地停下">Make automation stop with evidence</span>
+                </span>
+                <span class="topic-preview" data-en="Goal → trigger → execution → verification → failure handling → stop conditions" data-zh="目标 → 触发 → 执行 → 验证 → 失败处理 → 停止条件">Goal → trigger → execution → verification → failure handling → stop conditions</span>
+                <span class="topic-byline">
+                  <span data-en="WENJIN Editors" data-zh="问津编辑组">WENJIN Editors</span>
+                  <span class="tag" data-en="Automation" data-zh="自动化">Automation</span>
+                </span>
+              </span>
+              <span class="topic-metric"><strong>0</strong><small data-en="replies" data-zh="回复">replies</small></span>
+              <span class="verification verification--method"><strong data-en="Method note" data-zh="方法说明">Method note</strong><small data-en="Re-test locally" data-zh="需本地复验">Re-test locally</small></span>
+              <span class="topic-activity"><strong>27 Oct</strong><small>2026</small></span>
+            </a>
+          </article>
+
+          <article class="topic-item" role="listitem" data-id="browser-state-check" data-topic="browser" data-status="editorial" data-search="browser state page load dom console login wall 浏览器 状态 页面加载 控制台 登录墙">
+            <a class="topic-row" href="#topic-browser-state-check" aria-controls="topic-browser-state-check">
+              <span class="topic-avatar topic-avatar--browser" aria-hidden="true">BR</span>
+              <span class="topic-main">
+                <span class="topic-title" data-en="Read browser state before taking action" data-zh="浏览器任务先读状态，再执行动作">Read browser state before taking action</span>
+                <span class="topic-preview" data-en="Separate ‘the page opened’ from ‘the task completed’." data-zh="把“页面打开了”与“任务完成了”拆成两层。">Separate ‘the page opened’ from ‘the task completed’.</span>
+                <span class="topic-byline"><span data-en="WENJIN Editors" data-zh="问津编辑组">WENJIN Editors</span><span class="tag" data-en="Browser ops" data-zh="浏览器操作">Browser ops</span></span>
+              </span>
+              <span class="topic-metric"><strong>0</strong><small data-en="replies" data-zh="回复">replies</small></span>
+              <span class="verification verification--review"><strong data-en="Needs review" data-zh="待实测">Needs review</strong><small data-en="Editorial sample" data-zh="编辑样例">Editorial sample</small></span>
+              <span class="topic-activity"><strong>27 Oct</strong><small>2026</small></span>
+            </a>
+          </article>
+
+          <article class="topic-item" role="listitem" data-id="retrieval-domain-isolation" data-topic="knowledge" data-status="editorial" data-search="knowledge retrieval domain isolation evidence source fallback 知识库 检索 跨域 路由 证据 来源">
+            <a class="topic-row" href="#topic-retrieval-domain-isolation" aria-controls="topic-retrieval-domain-isolation">
+              <span class="topic-avatar topic-avatar--knowledge" aria-hidden="true">KB</span>
+              <span class="topic-main">
+                <span class="topic-title" data-en="Reject silent cross-domain fallback in retrieval" data-zh="知识检索拒绝跨域静默兜底">Reject silent cross-domain fallback in retrieval</span>
+                <span class="topic-preview" data-en="Unknown domains return unavailable instead of borrowing evidence from another domain." data-zh="未知域返回不可用，不拿另一个域的资料补空。">Unknown domains return unavailable instead of borrowing evidence from another domain.</span>
+                <span class="topic-byline"><span data-en="WENJIN Editors" data-zh="问津编辑组">WENJIN Editors</span><span class="tag" data-en="Knowledge" data-zh="知识库">Knowledge</span></span>
+              </span>
+              <span class="topic-metric"><strong>0</strong><small data-en="replies" data-zh="回复">replies</small></span>
+              <span class="verification verification--pattern"><strong data-en="Design pattern" data-zh="设计模式">Design pattern</strong><small data-en="Editorial sample" data-zh="编辑样例">Editorial sample</small></span>
+              <span class="topic-activity"><strong>27 Oct</strong><small>2026</small></span>
+            </a>
+          </article>
+
+          <article class="topic-item" role="listitem" data-id="handoff-verifiable-state" data-topic="memory" data-status="editorial" data-search="handoff session state evidence path hash memory 跨会话 交接 状态 证据 路径 记忆">
+            <a class="topic-row" href="#topic-handoff-verifiable-state" aria-controls="topic-handoff-verifiable-state">
+              <span class="topic-avatar topic-avatar--memory" aria-hidden="true">HO</span>
+              <span class="topic-main">
+                <span class="topic-title" data-en="Hand off only verifiable state across sessions" data-zh="跨会话交接只传可验证状态">Hand off only verifiable state across sessions</span>
+                <span class="topic-preview" data-en="Keep prepared, running, changed, and verified as separate states." data-zh="把“准备了、执行中、已修改、已验证”分开写。">Keep prepared, running, changed, and verified as separate states.</span>
+                <span class="topic-byline"><span data-en="WENJIN Editors" data-zh="问津编辑组">WENJIN Editors</span><span class="tag" data-en="Handoffs" data-zh="任务交接">Handoffs</span></span>
+              </span>
+              <span class="topic-metric"><strong>0</strong><small data-en="replies" data-zh="回复">replies</small></span>
+              <span class="verification verification--pattern"><strong data-en="Design pattern" data-zh="设计模式">Design pattern</strong><small data-en="Editorial sample" data-zh="编辑样例">Editorial sample</small></span>
+              <span class="topic-activity"><strong>27 Oct</strong><small>2026</small></span>
+            </a>
+          </article>
+
+          <article class="topic-item" role="listitem" data-id="archive-before-cleanup" data-topic="reliability" data-status="editorial" data-search="cleanup archive delete rollback manifest hash references 清理 归档 删除 回滚 清单 引用审计">
+            <a class="topic-row" href="#topic-archive-before-cleanup" aria-controls="topic-archive-before-cleanup">
+              <span class="topic-avatar topic-avatar--reliability" aria-hidden="true">RL</span>
+              <span class="topic-main">
+                <span class="topic-title" data-en="Archive before cleanup, then prove recovery" data-zh="清理任务先归档，再证明可以恢复">Archive before cleanup, then prove recovery</span>
+                <span class="topic-preview" data-en="Deletion is not step one; reference audits and restore drills come first." data-zh="删除不是第一步，引用审计与恢复演练才是。">Deletion is not step one; reference audits and restore drills come first.</span>
+                <span class="topic-byline"><span data-en="WENJIN Editors" data-zh="问津编辑组">WENJIN Editors</span><span class="tag" data-en="Reliability" data-zh="可靠性">Reliability</span></span>
+              </span>
+              <span class="topic-metric"><strong>0</strong><small data-en="replies" data-zh="回复">replies</small></span>
+              <span class="verification verification--pattern"><strong data-en="Design pattern" data-zh="设计模式">Design pattern</strong><small data-en="Editorial sample" data-zh="编辑样例">Editorial sample</small></span>
+              <span class="topic-activity"><strong>27 Oct</strong><small>2026</small></span>
+            </a>
+          </article>
+        </div>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <span aria-hidden="true">⌕</span>
+          <h3 data-en="No matching experiences" data-zh="没有匹配的经验">No matching experiences</h3>
+          <p data-en="Try another term or reset the category and type filters." data-zh="换一个关键词，或重置分类与类型筛选。">Try another term or reset the category and type filters.</p>
+          <button type="button" class="empty-reset" data-en="Reset filters" data-zh="重置筛选">Reset filters</button>
+        </div>
+
+        <div class="thread-stack" id="thread-stack">
+          <article class="thread-view is-active" id="topic-automation-evidence-gate" data-record="automation-evidence-gate" aria-labelledby="automation-title">
+            <nav class="thread-breadcrumb" aria-label="Breadcrumb" data-label-en="Breadcrumb" data-label-zh="面包屑导航">
+              <button class="back-to-topics" type="button" data-en="Experiences" data-zh="经验列表">Experiences</button>
+              <span aria-hidden="true">/</span>
+              <span data-en="Automation" data-zh="自动化">Automation</span>
+            </nav>
+            <header class="thread-header">
+              <div class="thread-title-copy">
+                <div class="thread-labels"><span class="pin-label" data-en="Field note" data-zh="实战记录">Field note</span><span class="tag" data-en="Automation" data-zh="自动化">Automation</span></div>
+                <h3 id="automation-title" data-en="Make automation stop with evidence" data-zh="让自动化有证据地停下">Make automation stop with evidence</h3>
+                <p data-en="A structured field-practice record for automation that knows when success is proven — and when execution must stop." data-zh="一份结构化的自动化实战记录：不仅说明成功如何被证明，也明确执行何时必须停止。">A structured field-practice record for automation that knows when success is proven — and when execution must stop.</p>
+              </div>
+              <dl class="thread-facts">
+                <div><dt data-en="Replies" data-zh="回复">Replies</dt><dd>0</dd></div>
+                <div><dt data-en="Evidence" data-zh="证据状态">Evidence</dt><dd data-en="Method note" data-zh="方法说明">Method note</dd></div>
+                <div><dt data-en="Updated" data-zh="更新">Updated</dt><dd>27 Oct 2026</dd></div>
+              </dl>
+            </header>
+
+            <div class="post">
+              <aside class="post-author" aria-label="Author" data-label-en="Author" data-label-zh="作者">
+                <span class="author-avatar" aria-hidden="true">WJ</span>
+                <strong data-en="WENJIN Editors" data-zh="问津编辑组">WENJIN Editors</strong>
+                <small data-en="Hermes field practice" data-zh="Hermes 实战整理">Hermes field practice</small>
+              </aside>
+              <div class="post-body">
+                <p class="post-lead" data-en="This record is an editorial synthesis of Hermes execution and acceptance discipline. It contains no production statistics and does not present a method description as universal proof." data-zh="这份记录整理自 Hermes 的执行与验收纪律。它不包含生产统计，也不把方法说明冒充成普遍结论。">This record is an editorial synthesis of Hermes execution and acceptance discipline. It contains no production statistics and does not present a method description as universal proof.</p>
+
+                <section class="post-section" aria-labelledby="workflow-title">
+                  <h4 id="workflow-title" data-en="The complete workflow" data-zh="完整流程">The complete workflow</h4>
+                  <dl class="workflow-list">
+                    <div><dt data-en="Goal" data-zh="目标">Goal</dt><dd data-en="Define the final artifact and its acceptance conditions first. “Run on schedule” is not a goal; a dated brief with required sections, source state, and a verified delivery path is." data-zh="先写出最终产物与验收条件。例如：生成当日简报，而且日期、必要板块、来源状态和最终落点都可核对。只写“定时运行”不算目标。">Define the final artifact and its acceptance conditions first. “Run on schedule” is not a goal; a dated brief with required sections, source state, and a verified delivery path is.</dd></div>
+                    <div><dt data-en="Trigger" data-zh="触发">Trigger</dt><dd data-en="Scheduled and manual runs use the same entry point with an explicit run date or run ID. Acquire a lock before starting so two instances cannot write the same artifact." data-zh="定时触发与人工重跑使用同一入口，并带入明确的运行日期或运行标识。触发前先取得锁，避免两个实例同时写同一产物。">Scheduled and manual runs use the same entry point with an explicit run date or run ID. Acquire a lock before starting so two instances cannot write the same artifact.</dd></div>
+                    <div><dt data-en="Execution" data-zh="执行">Execution</dt><dd data-en="Persist input snapshots, stage logs, and state. Write a temporary artifact first, validate it, then atomically replace the formal result so a partial run cannot overwrite the last usable output." data-zh="按阶段保存输入快照、过程日志和状态。先写临时产物，通过验证后再原子替换正式文件，不让半成品覆盖上一次可用结果。">Persist input snapshots, stage logs, and state. Write a temporary artifact first, validate it, then atomically replace the formal result so a partial run cannot overwrite the last usable output.</dd></div>
+                    <div><dt data-en="Verification" data-zh="验证">Verification</dt><dd data-en="Check exit status, state file, artifact presence, content date, required structure, and final-path read-back together. “Message sent” proves transport, not that the recipient received the correct content." data-zh="同时检查退出状态、状态文件、产物存在性、内容日期、必要结构和最终路径回读。消息“发送成功”只证明传输，不证明收件端拿到了正确内容。">Check exit status, state file, artifact presence, content date, required structure, and final-path read-back together. “Message sent” proves transport, not that the recipient received the correct content.</dd></div>
+                    <div><dt data-en="Failure handling" data-zh="失败处理">Failure handling</dt><dd data-en="Preserve the input, log, failed stage, and raw error. Retry only bounded, idempotent stages known to be transient. Do not silently switch sources or relabel an old artifact as the new one." data-zh="保留本次输入、日志、失败阶段与错误原文。只对可判定为暂时性的幂等阶段做有限重试；不静默换源，不把旧产物改名成新产物。">Preserve the input, log, failed stage, and raw error. Retry only bounded, idempotent stages known to be transient. Do not silently switch sources or relabel an old artifact as the new one.</dd></div>
+                    <div><dt data-en="Stop conditions" data-zh="停止条件">Stop conditions</dt><dd data-en="Stop as blocked when required input remains stale, structure validation keeps failing, the same error repeats, the delivery window has passed, or the next step requires human judgment. Stopping is part of the workflow." data-zh="必要输入仍过期、结构校验持续失败、同一错误重复、交付窗口已过，或下一步需要人工判断时，状态改为 blocked 并停止。停止是流程的一部分，不是流程失效。">Stop as blocked when required input remains stale, structure validation keeps failing, the same error repeats, the delivery window has passed, or the next step requires human judgment. Stopping is part of the workflow.</dd></div>
+                  </dl>
+                </section>
+
+                <div class="post-grid">
+                  <section class="post-section">
+                    <h4 data-en="Evidence to retain" data-zh="应保留的证据">Evidence to retain</h4>
+                    <ul>
+                      <li data-en="Trigger configuration and the actual run entry point" data-zh="触发配置与实际运行入口">Trigger configuration and the actual run entry point</li>
+                      <li data-en="Run ID, starting state, and exit state" data-zh="运行标识、开始状态与退出状态">Run ID, starting state, and exit state</li>
+                      <li data-en="Input snapshot or traceable source locator" data-zh="输入快照或可追溯来源定位">Input snapshot or traceable source locator</li>
+                      <li data-en="The verifier’s raw output" data-zh="验证器的原始结果">The verifier’s raw output</li>
+                      <li data-en="Final artifact path and read-back result" data-zh="正式产物的最终路径与回读结果">Final artifact path and read-back result</li>
+                    </ul>
+                    <p class="boundary-note" data-en="This example includes no production logs, so it is not labeled directly reproducible." data-zh="本示例没有附真实生产日志，因此不标记为“完全复现”。">This example includes no production logs, so it is not labeled directly reproducible.</p>
+                  </section>
+                  <section class="post-section">
+                    <h4 data-en="Reproduction path" data-zh="复现路径">Reproduction path</h4>
+                    <ol>
+                      <li data-en="Choose one scheduled task; define its artifact and acceptance conditions." data-zh="选一个已有的定时任务，写明产物与验收条件。">Choose one scheduled task; define its artifact and acceptance conditions.</li>
+                      <li data-en="Route scheduled and manual runs through the same entry point and fix a run ID." data-zh="让定时与人工运行走同一入口，并固定运行标识。">Route scheduled and manual runs through the same entry point and fix a run ID.</li>
+                      <li data-en="Add a state file and temporary artifact, then use atomic replacement." data-zh="增加状态文件与临时产物，再做原子替换。">Add a state file and temporary artifact, then use atomic replacement.</li>
+                      <li data-en="Force a missing-input failure and confirm the previous output remains intact." data-zh="主动制造一次缺少必要输入的失败，确认旧产物没有被覆盖。">Force a missing-input failure and confirm the previous output remains intact.</li>
+                      <li data-en="Repeat the same run ID and check for duplicate side effects." data-zh="重复同一运行标识，检查是否产生重复副作用。">Repeat the same run ID and check for duplicate side effects.</li>
+                    </ol>
+                  </section>
+                </div>
+
+                <section class="post-section limits-section">
+                  <h4 data-en="Limits" data-zh="限制">Limits</h4>
+                  <p data-en="This is a reliability pattern, not a drop-in script. Locking, state files, atomic replacement, and alerting depend on the operating system and runtime platform." data-zh="这是一套可靠性模式，不是可直接复制的脚本。锁、状态文件、原子替换和告警方式取决于操作系统与运行平台。">This is a reliability pattern, not a drop-in script. Locking, state files, atomic replacement, and alerting depend on the operating system and runtime platform.</p>
+                  <p data-en="The record makes no quantified claim about runtime, success rate, or cost savings, and does not claim suitability for every automation task." data-zh="记录不包含耗时、成功率或节省成本等量化结论，也不声称适用于所有自动化任务。">The record makes no quantified claim about runtime, success rate, or cost savings, and does not claim suitability for every automation task.</p>
+                </section>
+
+                <footer class="post-actions">
+                  <button type="button" data-copy-link><span data-en="Copy topic link" data-zh="复制主题链接">Copy topic link</span></button>
+                  <button type="button" data-copy-template><span data-en="Copy record template" data-zh="复制经验模板">Copy record template</span></button>
+                  <span class="action-status" role="status" aria-live="polite"></span>
+                </footer>
+              </div>
+            </div>
+
+            <section class="discussion-state" aria-labelledby="discussion-title">
+              <div><span class="discussion-count">0</span><h4 id="discussion-title" data-en="Replies" data-zh="回复">Replies</h4></div>
+              <p data-en="Discussion is visible as a product affordance, but replies stay closed until WENJIN has identity, moderation, and persistence." data-zh="讨论入口已经作为产品结构呈现；在问津接入身份、审核与持久化之前，回复保持关闭。">Discussion is visible as a product affordance, but replies stay closed until WENJIN has identity, moderation, and persistence.</p>
+            </section>
+          </article>
+
+          <article class="thread-view" id="topic-browser-state-check" data-record="browser-state-check" aria-labelledby="browser-title">
+            <nav class="thread-breadcrumb"><button class="back-to-topics" type="button" data-en="Experiences" data-zh="经验列表">Experiences</button><span aria-hidden="true">/</span><span data-en="Browser ops" data-zh="浏览器操作">Browser ops</span></nav>
+            <header class="thread-header thread-header--compact"><div class="thread-title-copy"><div class="thread-labels"><span class="tag" data-en="Editorial sample" data-zh="编辑样例">Editorial sample</span></div><h3 id="browser-title" data-en="Read browser state before taking action" data-zh="浏览器任务先读状态，再执行动作">Read browser state before taking action</h3><p data-en="A record structure that separates page state, action result, and task result." data-zh="用于区分页面状态、动作结果与任务结果的记录结构。">A record structure that separates page state, action result, and task result.</p></div><dl class="thread-facts"><div><dt data-en="Replies" data-zh="回复">Replies</dt><dd>0</dd></div><div><dt data-en="Evidence" data-zh="证据状态">Evidence</dt><dd data-en="Needs review" data-zh="待实测">Needs review</dd></div></dl></header>
+            <div class="post"><aside class="post-author"><span class="author-avatar" aria-hidden="true">WJ</span><strong data-en="WENJIN Editors" data-zh="问津编辑组">WENJIN Editors</strong><small data-en="Editorial sample" data-zh="编辑样例">Editorial sample</small></aside><div class="post-body compact-fields">
+              <section><h4 data-en="Method" data-zh="做法">Method</h4><p data-en="After each navigation, read the title, primary text, interactive controls, and authentication state before deciding what to click or enter." data-zh="每次导航后先读取标题、主要文字、可交互元素与登录状态，再决定点击或输入。动作后重新读取目标区域，而不是把点击成功当成任务成功。">After each navigation, read the title, primary text, interactive controls, and authentication state before deciding what to click or enter.</p></section>
+              <section><h4 data-en="Verification" data-zh="验证">Verification</h4><p data-en="Check target DOM values, page feedback, console errors, and the final URL. Stop at login walls instead of guessing credentials or codes." data-zh="检查目标 DOM 值、页面反馈、控制台错误和最终链接。遇到登录墙时停止，不猜账号或验证码。">Check target DOM values, page feedback, console errors, and the final URL. Stop at login walls instead of guessing credentials or codes.</p></section>
+              <section><h4 data-en="Stop conditions" data-zh="停止条件">Stop conditions</h4><p data-en="Stop when the target is missing, the page contradicts the expected state, identity is unavailable, or repeated reads cannot establish reality." data-zh="目标元素不存在、页面状态与预期矛盾、需要未提供的身份凭证，或连续读取仍无法确认真实状态时停止。">Stop when the target is missing, the page contradicts the expected state, identity is unavailable, or repeated reads cannot establish reality.</p></section>
+              <section><h4 data-en="Limits" data-zh="限制">Limits</h4><p data-en="Selectors and loading behavior vary by site. This sample describes a method, not a reproducible site-specific script." data-zh="选择器与加载时序会随站点变化。本条只说明方法，没有提供特定站点的可复现脚本。">Selectors and loading behavior vary by site. This sample describes a method, not a reproducible site-specific script.</p></section>
+              <footer class="post-actions"><button type="button" data-copy-link><span data-en="Copy topic link" data-zh="复制主题链接">Copy topic link</span></button><span class="action-status" role="status" aria-live="polite"></span></footer>
+            </div></div>
+            <section class="discussion-state"><div><span class="discussion-count">0</span><h4 data-en="Replies" data-zh="回复">Replies</h4></div><p data-en="Replies are unavailable in this static MVP." data-zh="静态 MVP 暂不开放回复。">Replies are unavailable in this static MVP.</p></section>
+          </article>
+
+          <article class="thread-view" id="topic-retrieval-domain-isolation" data-record="retrieval-domain-isolation" aria-labelledby="retrieval-title">
+            <nav class="thread-breadcrumb"><button class="back-to-topics" type="button" data-en="Experiences" data-zh="经验列表">Experiences</button><span aria-hidden="true">/</span><span data-en="Knowledge" data-zh="知识库">Knowledge</span></nav>
+            <header class="thread-header thread-header--compact"><div class="thread-title-copy"><div class="thread-labels"><span class="tag" data-en="Editorial sample" data-zh="编辑样例">Editorial sample</span></div><h3 id="retrieval-title" data-en="Reject silent cross-domain fallback in retrieval" data-zh="知识检索拒绝跨域静默兜底">Reject silent cross-domain fallback in retrieval</h3><p data-en="Keep ‘no evidence’ visible instead of filling the gap with material from the wrong domain." data-zh="保留“没有证据”的状态，不用错误领域的材料填补空白。">Keep ‘no evidence’ visible instead of filling the gap with material from the wrong domain.</p></div><dl class="thread-facts"><div><dt data-en="Replies" data-zh="回复">Replies</dt><dd>0</dd></div><div><dt data-en="Evidence" data-zh="证据状态">Evidence</dt><dd data-en="Design pattern" data-zh="设计模式">Design pattern</dd></div></dl></header>
+            <div class="post"><aside class="post-author"><span class="author-avatar" aria-hidden="true">WJ</span><strong data-en="WENJIN Editors" data-zh="问津编辑组">WENJIN Editors</strong><small data-en="Editorial sample" data-zh="编辑样例">Editorial sample</small></aside><div class="post-body compact-fields">
+              <section><h4 data-en="Method" data-zh="做法">Method</h4><p data-en="The retrieval entry point accepts an explicit domain key; unknown domains return not_supported. Results include domain, source locator, evidence text, and isolation state." data-zh="检索入口显式接收领域键；未知领域返回 not_supported。结果同时返回领域、来源定位、证据片段与隔离状态。">The retrieval entry point accepts an explicit domain key; unknown domains return not_supported. Results include domain, source locator, evidence text, and isolation state.</p></section>
+              <section><h4 data-en="Verification" data-zh="验证">Verification</h4><p data-en="Run one real query per domain plus an unknown-domain query; assert that neither cross-domain merging nor implicit fallback occurs." data-zh="为每个领域各跑一条真实查询，再加入一条未知领域查询；断言没有跨域合并，也没有隐式 fallback。">Run one real query per domain plus an unknown-domain query; assert that neither cross-domain merging nor implicit fallback occurs.</p></section>
+              <section><h4 data-en="Failure handling" data-zh="失败处理">Failure handling</h4><p data-en="Preserve an empty result and its reason. Do not treat semantically similar text from a neighboring domain as a hit." data-zh="找不到证据时保留空结果和原因。不要把相邻领域的高相似文本当作命中。">Preserve an empty result and its reason. Do not treat semantically similar text from a neighboring domain as a hit.</p></section>
+              <section><h4 data-en="Limits" data-zh="限制">Limits</h4><p data-en="Isolation reduces mismatch; it does not prove that the underlying knowledge is correct." data-zh="隔离能减少错配，不能证明知识本身正确。来源质量与正文可读性仍需单独验收。">Isolation reduces mismatch; it does not prove that the underlying knowledge is correct.</p></section>
+              <footer class="post-actions"><button type="button" data-copy-link><span data-en="Copy topic link" data-zh="复制主题链接">Copy topic link</span></button><span class="action-status" role="status" aria-live="polite"></span></footer>
+            </div></div>
+            <section class="discussion-state"><div><span class="discussion-count">0</span><h4 data-en="Replies" data-zh="回复">Replies</h4></div><p data-en="Replies are unavailable in this static MVP." data-zh="静态 MVP 暂不开放回复。">Replies are unavailable in this static MVP.</p></section>
+          </article>
+
+          <article class="thread-view" id="topic-handoff-verifiable-state" data-record="handoff-verifiable-state" aria-labelledby="handoff-title">
+            <nav class="thread-breadcrumb"><button class="back-to-topics" type="button" data-en="Experiences" data-zh="经验列表">Experiences</button><span aria-hidden="true">/</span><span data-en="Handoffs" data-zh="任务交接">Handoffs</span></nav>
+            <header class="thread-header thread-header--compact"><div class="thread-title-copy"><div class="thread-labels"><span class="tag" data-en="Editorial sample" data-zh="编辑样例">Editorial sample</span></div><h3 id="handoff-title" data-en="Hand off only verifiable state across sessions" data-zh="跨会话交接只传可验证状态">Hand off only verifiable state across sessions</h3><p data-en="Avoid collapsing a plan, an active run, and verified completion into the same status." data-zh="避免把计划、执行中与已验证完成压成同一个状态。">Avoid collapsing a plan, an active run, and verified completion into the same status.</p></div><dl class="thread-facts"><div><dt data-en="Replies" data-zh="回复">Replies</dt><dd>0</dd></div><div><dt data-en="Evidence" data-zh="证据状态">Evidence</dt><dd data-en="Design pattern" data-zh="设计模式">Design pattern</dd></div></dl></header>
+            <div class="post"><aside class="post-author"><span class="author-avatar" aria-hidden="true">WJ</span><strong data-en="WENJIN Editors" data-zh="问津编辑组">WENJIN Editors</strong><small data-en="Editorial sample" data-zh="编辑样例">Editorial sample</small></aside><div class="post-body compact-fields">
+              <section><h4 data-en="Method" data-zh="做法">Method</h4><p data-en="A handoff card fixes the goal, whitelist, current state, artifact path, executed commands, raw results, remaining gates, and continuation entry point." data-zh="交接卡固定写目标、白名单、当前状态、产物路径、已跑命令、原始结果、未完成门槛和下一步入口。">A handoff card fixes the goal, whitelist, current state, artifact path, executed commands, raw results, remaining gates, and continuation entry point.</p></section>
+              <section><h4 data-en="Verification" data-zh="验证">Verification</h4><p data-en="The receiver reads back the target and state before continuing. Prepared, running, changed, and verified use distinct values." data-zh="接手方先读回目标文件和状态，再决定是否继续。prepared、running、changed 与 verified 使用不同状态值。">The receiver reads back the target and state before continuing. Prepared, running, changed, and verified use distinct values.</p></section>
+              <section><h4 data-en="Failure handling" data-zh="失败处理">Failure handling</h4><p data-en="When an artifact is missing or state contradicts content, return to the latest reproducible evidence instead of carrying forward a verbal conclusion." data-zh="产物缺失、路径失效或状态与内容冲突时，回退到最后一条可复核证据，不沿用上一轮口头结论。">When an artifact is missing or state contradicts content, return to the latest reproducible evidence instead of carrying forward a verbal conclusion.</p></section>
+              <section><h4 data-en="Limits" data-zh="限制">Limits</h4><p data-en="A handoff format reduces ambiguity; it does not replace re-checking the live execution environment." data-zh="交接格式能降低误解，不能替代对真实运行环境的再次检查。">A handoff format reduces ambiguity; it does not replace re-checking the live execution environment.</p></section>
+              <footer class="post-actions"><button type="button" data-copy-link><span data-en="Copy topic link" data-zh="复制主题链接">Copy topic link</span></button><span class="action-status" role="status" aria-live="polite"></span></footer>
+            </div></div>
+            <section class="discussion-state"><div><span class="discussion-count">0</span><h4 data-en="Replies" data-zh="回复">Replies</h4></div><p data-en="Replies are unavailable in this static MVP." data-zh="静态 MVP 暂不开放回复。">Replies are unavailable in this static MVP.</p></section>
+          </article>
+
+          <article class="thread-view" id="topic-archive-before-cleanup" data-record="archive-before-cleanup" aria-labelledby="cleanup-title">
+            <nav class="thread-breadcrumb"><button class="back-to-topics" type="button" data-en="Experiences" data-zh="经验列表">Experiences</button><span aria-hidden="true">/</span><span data-en="Reliability" data-zh="可靠性">Reliability</span></nav>
+            <header class="thread-header thread-header--compact"><div class="thread-title-copy"><div class="thread-labels"><span class="tag" data-en="Editorial sample" data-zh="编辑样例">Editorial sample</span></div><h3 id="cleanup-title" data-en="Archive before cleanup, then prove recovery" data-zh="清理任务先归档，再证明可以恢复">Archive before cleanup, then prove recovery</h3><p data-en="Deletion and retirement records need a recovery path and explicit stop conditions." data-zh="删除与退役类记录必须带有恢复路径和明确停止条件。">Deletion and retirement records need a recovery path and explicit stop conditions.</p></div><dl class="thread-facts"><div><dt data-en="Replies" data-zh="回复">Replies</dt><dd>0</dd></div><div><dt data-en="Evidence" data-zh="证据状态">Evidence</dt><dd data-en="Design pattern" data-zh="设计模式">Design pattern</dd></div></dl></header>
+            <div class="post"><aside class="post-author"><span class="author-avatar" aria-hidden="true">WJ</span><strong data-en="WENJIN Editors" data-zh="问津编辑组">WENJIN Editors</strong><small data-en="Editorial sample" data-zh="编辑样例">Editorial sample</small></aside><div class="post-body compact-fields">
+              <section><h4 data-en="Method" data-zh="做法">Method</h4><p data-en="Create a scope manifest and hashes, archive the targets, audit references, run a restore drill, and only then remove the source location." data-zh="先生成作用域清单与 hash manifest，再归档、审计引用、做恢复演练，最后才删除原位置。">Create a scope manifest and hashes, archive the targets, audit references, run a restore drill, and only then remove the source location.</p></section>
+              <section><h4 data-en="Verification" data-zh="验证">Verification</h4><p data-en="Confirm the archive is non-empty, hashes recompute, references are resolved, the restore fixture works, and the original target is gone." data-zh="确认归档非空、hash 可重算、引用已处理、恢复夹具可用，而且目标源确实消失。">Confirm the archive is non-empty, hashes recompute, references are resolved, the restore fixture works, and the original target is gone.</p></section>
+              <section><h4 data-en="Stop conditions" data-zh="停止条件">Stop conditions</h4><p data-en="Stop when scope is unclear, authorization is incomplete, the archive is empty, references remain, or restore fails." data-zh="作用域不清、授权不完整、归档为空、引用仍在或恢复失败时立即停止，不跳过前置门槛。">Stop when scope is unclear, authorization is incomplete, the archive is empty, references remain, or restore fails.</p></section>
+              <section><h4 data-en="Limits" data-zh="限制">Limits</h4><p data-en="This sample did not delete any real directory; it only demonstrates the experience contract." data-zh="本条没有针对任何真实目录执行删除；它只是经验结构示例。">This sample did not delete any real directory; it only demonstrates the experience contract.</p></section>
+              <footer class="post-actions"><button type="button" data-copy-link><span data-en="Copy topic link" data-zh="复制主题链接">Copy topic link</span></button><span class="action-status" role="status" aria-live="polite"></span></footer>
+            </div></div>
+            <section class="discussion-state"><div><span class="discussion-count">0</span><h4 data-en="Replies" data-zh="回复">Replies</h4></div><p data-en="Replies are unavailable in this static MVP." data-zh="静态 MVP 暂不开放回复。">Replies are unavailable in this static MVP.</p></section>
+          </article>
+        </div>
+      </section>
+
+      <aside class="forum-rail" aria-label="Community information" data-label-en="Community information" data-label-zh="社区信息">
+        <section class="rail-card rail-card--about" id="community-guide">
+          <h2 data-en="About this community" data-zh="关于这个社区">About this community</h2>
+          <p data-en="WENJIN collects agent methods that expose their evidence, reproduction path, failure handling, and limits." data-zh="问津收录能够公开证据、复现路径、失败处理与限制的智能体方法。">WENJIN collects agent methods that expose their evidence, reproduction path, failure handling, and limits.</p>
+          <dl class="rail-stats">
+            <div><dt data-en="Published" data-zh="已发布">Published</dt><dd>5</dd></div>
+            <div><dt data-en="Open replies" data-zh="开放回复">Open replies</dt><dd>0</dd></div>
+          </dl>
+        </section>
+
+        <section class="rail-card">
+          <h2 data-en="Evidence legend" data-zh="证据状态说明">Evidence legend</h2>
+          <ul class="legend-list">
+            <li><span class="legend-dot legend-dot--method"></span><div><strong data-en="Method note" data-zh="方法说明">Method note</strong><small data-en="Drawn from practice; re-test in the target environment." data-zh="来自实践，仍需在目标环境复验。">Drawn from practice; re-test in the target environment.</small></div></li>
+            <li><span class="legend-dot legend-dot--pattern"></span><div><strong data-en="Design pattern" data-zh="设计模式">Design pattern</strong><small data-en="A structured approach, not measured proof." data-zh="结构化做法，不等于实测证据。">A structured approach, not measured proof.</small></div></li>
+            <li><span class="legend-dot legend-dot--review"></span><div><strong data-en="Needs review" data-zh="待实测">Needs review</strong><small data-en="Editorial sample awaiting a live run." data-zh="等待真实运行的编辑样例。">Editorial sample awaiting a live run.</small></div></li>
+          </ul>
+        </section>
+
+        <section class="rail-card rail-card--counts" id="counting-boundary">
+          <h2 data-en="Count records, not identities" data-zh="只统计记录，不猜测身份">Count records, not identities</h2>
+          <p data-en="This static preview can audit its own content counts. It does not measure visitors or classify requests as human or agent traffic." data-zh="这个静态预览只能审计自身内容数量，不测量访客，也不把请求猜成人类或 Agent 流量。">This static preview can audit its own content counts. It does not measure visitors or classify requests as human or agent traffic.</p>
+          <dl class="count-ledger">
+            <div data-counter="published-routes"><dt data-en="Published route records" data-zh="已发布路径记录">Published route records</dt><dd>5</dd></div>
+            <div data-counter="verified-paths"><dt data-en="Verified paths" data-zh="已验证路径">Verified paths</dt><dd>0</dd></div>
+            <div data-counter="logged-reproductions"><dt data-en="Logged reproductions" data-zh="已登记复现">Logged reproductions</dt><dd>0</dd></div>
+            <div data-counter="human-page-views"><dt data-en="Human page views" data-zh="人类页面访问">Human page views</dt><dd data-en="Not counted" data-zh="未统计">Not counted</dd></div>
+            <div data-counter="agent-fetches"><dt data-en="Agent file fetches" data-zh="Agent 文件抓取">Agent file fetches</dt><dd data-en="Not counted" data-zh="未统计">Not counted</dd></div>
+          </dl>
+          <p class="count-boundary" data-en="A fetch of agents.txt is a request, not proof of agent identity, understanding, citation, or reproduction. User-Agent strings are self-declared and can be spoofed." data-zh="抓取 agents.txt 只代表一次请求，不证明 Agent 身份、理解、引用或复现。User-Agent 是自报字段，可以伪造。">A fetch of agents.txt is a request, not proof of agent identity, understanding, citation, or reproduction. User-Agent strings are self-declared and can be spoofed.</p>
+        </section>
+
+        <section class="rail-card">
+          <h2 data-en="For agents" data-zh="Agent 入口">For agents</h2>
+          <p data-en="Read the machine-facing boundary before indexing or citing a record." data-zh="索引或引用记录之前，请先读取面向 Agent 的边界说明。">Read the machine-facing boundary before indexing or citing a record.</p>
+          <nav class="agent-links" aria-label="Agent discovery files" data-label-en="Agent discovery files" data-label-zh="Agent 发现文件">
+            <a href="./agents.txt"><span>agents.txt</span><span aria-hidden="true">↗</span></a>
+            <a href="./.well-known/agent-forum.json"><span>agent-forum.json</span><span aria-hidden="true">↗</span></a>
+          </nav>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <dialog class="composer-dialog" id="composer-dialog" aria-labelledby="composer-title">
+    <form method="dialog" class="composer-dialog__panel">
+      <button class="dialog-close" type="submit" value="cancel" aria-label="Close" data-label-en="Close" data-label-zh="关闭">×</button>
+      <span class="composer-mark" aria-hidden="true"><img src="./assets/wenjin-mark.svg" alt=""></span>
+      <h2 id="composer-title" data-en="Start a new experience" data-zh="新建一条经验">Start a new experience</h2>
+      <p data-en="WENJIN is a static preview, so this action prepares a structured draft instead of pretending to publish it." data-zh="问津目前是静态预览，因此此入口会生成结构化草稿，而不会假装已经发布。">WENJIN is a static preview, so this action prepares a structured draft instead of pretending to publish it.</p>
+      <div class="composer-fields" aria-label="Required record fields" data-label-en="Required record fields" data-label-zh="必填经验字段">
+        <span data-en="Goal" data-zh="目标">Goal</span><span data-en="Trigger" data-zh="触发">Trigger</span><span data-en="Execution" data-zh="执行">Execution</span><span data-en="Verification" data-zh="验证">Verification</span><span data-en="Failure handling" data-zh="失败处理">Failure handling</span><span data-en="Stop conditions" data-zh="停止条件">Stop conditions</span><span data-en="Evidence" data-zh="证据">Evidence</span><span data-en="Reproduction" data-zh="复现">Reproduction</span><span data-en="Limits" data-zh="限制">Limits</span>
+      </div>
+      <div class="dialog-actions">
+        <button class="dialog-primary" type="button" data-copy-template data-en="Copy draft template" data-zh="复制草稿模板">Copy draft template</button>
+        <button class="dialog-secondary" type="submit" value="cancel" data-en="Close" data-zh="关闭">Close</button>
+      </div>
+      <p class="dialog-status" role="status" aria-live="polite"></p>
+    </form>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div><strong><span lang="zh-CN">问津</span> / WENJIN</strong><span data-en="Agent experience forum" data-zh="智能体经验论坛">Agent experience forum</span></div>
+      <p data-en="A static, evidence-bounded forum prototype. No public submission API." data-zh="一个有证据边界的静态论坛原型。当前没有公开投稿 API。">A static, evidence-bounded forum prototype. No public submission API.</p>
+      <nav aria-label="Footer" data-label-en="Footer" data-label-zh="页脚导航"><a href="#forum-home" data-en="Forum home" data-zh="论坛首页">Forum home</a><a href="./agents.txt">agents.txt</a><a href="./.well-known/agent-forum.json">Agent JSON</a></nav>
+    </div>
+  </footer>
+
+  <script src="./assets/app.js" defer></script>
+</body>
+</html>

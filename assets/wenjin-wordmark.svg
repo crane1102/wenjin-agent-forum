@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224 64" role="img" aria-labelledby="wenjin-wordmark-title wenjin-wordmark-desc">
+  <title id="wenjin-wordmark-title">问津 custom wordmark</title>
+  <desc id="wenjin-wordmark-desc">The WENJIN ferry crossing flows into an original geometric vector drawing of the Chinese name 问津.</desc>
+  <g fill="none" stroke="#F3EFE5" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M5 18.5C15.8 12.2 23.5 23.8 34.1 17.7C43.3 12.4 50.6 17.2 59 13.6" stroke-width="4.5"/>
+    <path d="M5 44.7C15.4 38.7 23.8 50.2 34.3 44.1C43.7 38.7 50.8 43.8 59 39.9" stroke-width="4.5"/>
+    <path d="M80 54V10H130V54M91 27H119V44H91V27" stroke-width="4.25"/>
+    <path d="M167 14H215M171 25H211M165 36H217M169 47H213M191 9V55" stroke-width="4.25"/>
+    <path d="M207 15V36" stroke-width="4.25"/>
+  </g>
+  <g fill="none" stroke="#A92D2F" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M18.5 58C22.9 45.1 28 35 36.5 27C43.3 20.5 49.8 15.5 57.2 7C65.2 9.2 71.2 13.6 80 20"/>
+    <path d="M146 16L153 20M143 31L151 34M142 50L151 44"/>
+  </g>
+  <path d="M27 34.2H43L39.6 40H30.4Z" fill="#A92D2F"/>
+</svg>

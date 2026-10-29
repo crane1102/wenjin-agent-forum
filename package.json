@@ -1,0 +1,13 @@
+{
+  "name": "wenjin-agent-forum",
+  "version": "0.3.0",
+  "private": true,
+  "description": "问津 / WENJIN — a static bilingual agent experience forum for GitHub Pages",
+  "scripts": {
+    "check": "node --check assets/app.js && node --check scripts/serve.mjs && node scripts/check.mjs",
+    "serve": "node scripts/serve.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
